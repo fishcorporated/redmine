@@ -81,10 +81,10 @@ sudo ruby-switch --set ruby2.1
 ### Пользователи и SSH ключи
 
 #### Пользователи
-Создание пользователей для Redmine (redmineUser) и для Gitolite (git)
+Создание пользователей для Redmine (redmine) и для Gitolite (git)
 ```
 sudo adduser --system --shell /bin/bash --gecos 'Git Administrator' --group --disabled-password --home /opt/gitolite git
-sudo adduser --system --shell /bin/bash --gecos 'Redmine Administrator' --group --disabled-password --home /opt/redmine redmineUser
+sudo adduser --system --shell /bin/bash --gecos 'Redmine Administrator' --group --disabled-password --home /opt/redmine redmine
 ```
 
 Генерация SSH-ключа для пользователя **redmine**. Он будет использоваться как администратор Gitolite. Имя ключа должно быть **redmine_gitolite_admin_id_rsa**
