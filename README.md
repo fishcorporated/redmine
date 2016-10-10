@@ -348,7 +348,10 @@ sudo nano /etc/apache2/sites-available/000-default.conf
     PassengerResolveSymlinksInDocumentRoot on
 </Directory>
 ```
-
+Установите следующее значение DocumentRoot
+```
+DocumentRoot /var/www/html
+```
 
 ```
 sudo nano /etc/apache2/sites-available/default-ssl.conf
@@ -362,7 +365,7 @@ sudo nano /etc/apache2/sites-available/default-ssl.conf
 
 Установите следующее значение DocumentRoot
 ```
-DocumentRoot /var/www/html
+DocumentRoot /var/www/html/redmine
 ```
 Перезапустите Apache
 ```
