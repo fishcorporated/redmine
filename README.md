@@ -339,19 +339,27 @@ sudo a2enmod ssl
 ```
 Изменение настроек Apache
 ```
-sudo nano /etc/apache2/sites-available/default-ssl.conf
-```
-
-```
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
-Удалите следующее содержимое
+Удалите следующее содержимое 
 ```
 <Directory /var/www/html/redmine>
     RailsBaseURI /redmine
     PassengerResolveSymlinksInDocumentRoot on
 </Directory>
 ```
+
+
+```
+sudo nano /etc/apache2/sites-available/default-ssl.conf
+```
+Добавьте следующее содержимое 
+```
+<Directory /var/www/html/redmine>
+    RailsBaseURI /redmine
+    PassengerResolveSymlinksInDocumentRoot on
+</Directory>
+
 Установите следующее значение DocumentRoot
 ```
 DocumentRoot /var/www/html
